@@ -1,0 +1,22 @@
+.container {
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.main {
+    flex: 1;
+}
+
+.light .main {
+    background-color: white;;
+}
+
+.dark .main {
+    background-color: rgb(18, 18, 18)
+}
+
+.footer {
+    margin-top: auto;
+}

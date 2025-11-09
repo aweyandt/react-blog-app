@@ -1,0 +1,25 @@
+
+.contact_page {
+    padding: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input, textarea {
+    border: 1px solid gray;
+    padding: 1rem;
+}
+
+button {
+    background-color: rgb(120, 95, 204);
+    color: white;
+    padding: 0.5rem;
+}
+
+button:hover {
+    background-color: rgb(111, 88, 185);
+}

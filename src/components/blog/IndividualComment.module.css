@@ -1,0 +1,9 @@
+div {
+    margin-bottom: 0.5rem;
+}
+
+.comment_seperator {
+    border: 0;
+    border-top: 2px solid #000000;
+    margin: 20px 0;
+}
