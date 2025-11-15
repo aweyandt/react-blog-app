@@ -1,9 +1,17 @@
-div {
+.individual_comment {
     margin-bottom: 0.5rem;
+}
+
+.comment_text {
+    margin-bottom: 1rem;
 }
 
 .comment_seperator {
     border: 0;
     border-top: 2px solid #000000;
     margin: 20px 0;
+}
+
+.indent {
+    margin-left: 1rem;
 }

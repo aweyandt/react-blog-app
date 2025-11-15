@@ -1,31 +1,27 @@
 import React, { useEffect, useState, useRef } from 'react';
 import styles from './Comments.module.css';
 import IndividualComment from './IndividualComment';
-import { useParams } from 'react-router';
+import { Link, useParams } from 'react-router';
 import axios from 'axios';
+import { useUsername } from '../authWrapper/AuthContext';
 
 function Comments() {
     const params = useParams();
 
     const [comment, setComment] = useState({
-        name: "",
         content: ""
     });
 
     const [commentList, setCommentList] = useState([]);
     const textboxRef = useRef();
 
+    const username = useUsername();
+
     const postComment = async () => {
 
-        //Checking if the two comment fields actually have some info before submitting
-        //Gives the user an alert if not
-        if (comment.name.length === 0 || comment.content.length === 0) {
-            alert("Please make sure that both comment fields are filled out before attempting to submit!");
-            return;
-        }
         try {
             const commentRes = await axios.post(`https://jsonplaceholder.typicode.com/posts/${params.post_id}/comments`, {
-                name: comment.name,
+                name: username,
                 body: comment.content
             })
 
@@ -50,22 +46,35 @@ function Comments() {
     }, [params.post_id]);
 
     return (
-    <div className={styles.comments}>
-            <h2>Comments</h2>
-            <input 
-                value={comment.name}
-                onChange={(e) => setComment({...comment, name: e.target.value})}
-                placeholder='Name' />
-            <textarea 
-                ref = {textboxRef}
-                value={comment.content}
-                onChange={(e) => setComment({...comment, content: e.target.value})}
-                placeholder="Add a comment"></textarea>
-            <button 
-                onClick={postComment}
-                className={styles.submit_btn} 
-                type="submit">Submit
-            </button>
+        <div>
+            <h2>Comments:</h2>
+
+            {!username && (
+                <div className={styles.logged_out}>
+                    <p>You must 
+                        <Link to="/login" className={styles.link}> LOG IN </Link>  to comment.
+                    </p>
+                </div>
+            )}
+
+            {username && (
+                <div className={styles.comments}>
+                    <p>Ready to post a comment {username}?</p>
+                    <textarea 
+                        ref = {textboxRef}
+                        value={comment.content}
+                        onChange={(e) => setComment({...comment, content: e.target.value})}
+                        placeholder="Add a comment"></textarea>
+                    <button 
+                        onClick={postComment}
+                        className={styles.submit_btn} 
+                        type="submit">Submit
+                    </button>
+                </div>
+            )}
+            
+
+
             {commentList.length === 0 ? <p>No comments yet. Be the first to comment!</p> : 
             <div>
                 <h3>Existing Comments:</h3>

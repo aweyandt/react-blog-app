@@ -30,11 +30,12 @@ function ContactPage() {
 
     return (
         <div className={styles.contact_page}>
-            <form onSubmit={submitForm}>
-                <input placeholder="Name" value={formInput.name} onChange={e => setFormInput({...formInput, name: e.target.value })} required/>
-                <input placeholder="Email" value={formInput.email} onChange={e => setFormInput({...formInput, email: e.target.value })} required/>
-                <textarea placeholder="Message" value={formInput.message} onChange={e => setFormInput({...formInput, message: e.target.value })}/>
-                <button type="submit">Submit</button>
+            <h2><strong>Contact Us</strong></h2>
+            <form onSubmit={submitForm} className={styles.form}>
+                <input placeholder="Name" value={formInput.name} className={styles.input} onChange={e => setFormInput({...formInput, name: e.target.value })} required/>
+                <input placeholder="Email" value={formInput.email} className={styles.input} onChange={e => setFormInput({...formInput, email: e.target.value })} required/>
+                <textarea placeholder="Message" value={formInput.message} className={styles.textarea} onChange={e => setFormInput({...formInput, message: e.target.value })}/>
+                <button type="submit" className={styles.btn}>Submit</button>
             </form>
         </div>
     );

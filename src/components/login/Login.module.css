@@ -1,10 +1,9 @@
-
-.contact_page {
+.login_page {
     max-width: 50%;
     margin: 4rem;
 }
 
-.contact_page h2 {
+.login_page h2 {
     margin-bottom: 1rem;
     color: rgb(226, 150, 35);
 }
@@ -13,21 +12,26 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    
+}
+
+.username {
+    border: 4px;
+}
+
+.submit_btn {
+    padding: 1rem 2rem;
+    color: white;
+    background-color: rgb(226, 150, 35);
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.submit_btn:hover {
+    background-color: rgb(206, 137, 33);
 }
 
 .input, .textarea {
     border: 1px solid gray;
     padding: 1rem;
-}
-
-.btn {
-    background-color: rgb(226, 150, 35);
-    color: white;
-    padding: 1rem 2rem;
-    border-radius: 20px;
-    width: fit-content; 
-}
-
-.btn:hover {
-    background-color: rgb(206, 137, 33);
 }

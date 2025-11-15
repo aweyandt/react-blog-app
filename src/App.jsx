@@ -7,22 +7,27 @@ import PostList from './components/postLists/PostList';
 import Homepage from './components/homepage/Homepage';
 import IndividualBlogPost from './components/blog/IndividualBlogPost';
 import './App.css';
+import Login from './components/login/Login';
+import { AuthProvider } from './components/authWrapper/AuthProvider';
 
 function App() {
   return ( 
     <ThemeProvider>
-      <div className="container"> 
-        <Routes>
-          <Route element={<CommonLayout />}>
-            <Route>
-              <Route path="/" element={<Homepage />} />
-              <Route path="/contact" element={<ContactPage />} />
-              <Route path="/posts" element={<PostList />} />
-              <Route path="/posts/:post_id" element={<IndividualBlogPost />} />
+      <AuthProvider>
+        <div className="container"> 
+          <Routes>
+            <Route element={<CommonLayout />}>
+              <Route>
+                <Route path="/" element={<Homepage />} />
+                <Route path="/contact" element={<ContactPage />} />
+                <Route path="/posts" element={<PostList />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/posts/:post_id" element={<IndividualBlogPost />} />
+              </Route>
             </Route>
-          </Route>
-        </Routes>
-      </div>
+          </Routes>
+        </div>
+      </AuthProvider>
     </ThemeProvider>
   ); 
 }

@@ -1,8 +1,9 @@
 import React from 'react';
+import styles from './Content.module.css';
 
 function Content({title, content, author, date}) {
     return (
-        <main>
+        <div className={styles.content}>
             <h1>{title}</h1>
             <p>{content}</p>
             <div>
@@ -13,7 +14,7 @@ function Content({title, content, author, date}) {
                     <strong>Date:</strong> {date}
                 </p>
             </div>
-        </main>
+        </div>
     );
 }
 

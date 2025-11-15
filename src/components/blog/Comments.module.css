@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: start;
     gap: 1rem;
+    margin: 1rem 0;
 }
 
 .comments ul {
@@ -13,13 +14,41 @@
 .comments textarea {
     width: 100%;
     height: 100px;
+    border: 1px solid gray;
     padding: 1rem;
 }
 
-.submit_btn {
-    padding: 0.5rem;
-    color: white;
-    background-color: rgb(206, 133, 23);
-    border-radius: 20%;
+.comments input {
+    border: 1px solid gray;
+    padding: 1rem;
 }
 
+.link {
+    text-decoration: none;
+    color: rgb(120, 95, 204);
+}
+
+.link:hover {
+    color: rgb(76, 61, 128);
+}
+
+.submit_btn {
+    background-color: rgb(226, 150, 35);
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 20px;
+    width: fit-content; 
+    margin-bottom: 1.5rem;
+}
+
+.submit_btn:hover {
+    background-color: rgb(206, 137, 33);
+}
+
+.logged_out {
+    margin-bottom: 1rem;
+}
+
+.logged_out a {
+    text-decoration: none;
+}
