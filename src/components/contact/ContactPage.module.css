@@ -23,9 +23,10 @@
 .btn {
     background-color: rgb(226, 150, 35);
     color: white;
-    padding: 1rem 2rem;
+    padding: 0.5rem 1.5rem;
     border-radius: 20px;
     width: fit-content; 
+    font-size: 20px;
 }
 
 .btn:hover {

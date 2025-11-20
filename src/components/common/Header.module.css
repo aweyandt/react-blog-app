@@ -21,7 +21,7 @@
 .ul {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 2rem;
     list-style: none;
     align-items: center;
 
@@ -42,11 +42,12 @@ li a {
 }
 
 .btn {
-    padding: 0.5rem 1rem;
-    color: white;
     background-color: rgb(226, 150, 35);
+    color: white;
+    padding: 0.5rem 1rem;
     border-radius: 20px;
-    width: fit-content;
+    width: fit-content; 
+    font-size: 16px;
 }
 
 .btn:hover {

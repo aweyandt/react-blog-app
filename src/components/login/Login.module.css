@@ -20,11 +20,12 @@
 }
 
 .submit_btn {
-    padding: 1rem 2rem;
-    color: white;
     background-color: rgb(226, 150, 35);
+    color: white;
+    padding: 0.5rem 1.5rem;
     border-radius: 20px;
-    width: fit-content;
+    width: fit-content; 
+    font-size: 20px;
 }
 
 .submit_btn:hover {
