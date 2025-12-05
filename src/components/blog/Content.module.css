@@ -5,6 +5,5 @@
 } 
 
 .content h1 {
-    color: rgb(226, 150, 35);
+    color: var(--accent-beige);
 }
-

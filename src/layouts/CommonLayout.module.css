@@ -3,18 +3,28 @@
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background: var(--bg-dark);
+    color: var(--text-primary);
 }
 
 .main {
     flex: 1;
+    background: radial-gradient(circle at 20% 20%, rgba(47, 93, 77, 0.12), transparent 35%),
+                radial-gradient(circle at 80% 10%, rgba(216, 201, 168, 0.08), transparent 30%),
+                var(--bg-dark);
+    padding: 1rem 0 2rem 0;
 }
 
 .light .main {
-    background-color: white;;
+    background: radial-gradient(circle at 20% 20%, rgba(60, 122, 99, 0.08), transparent 35%),
+                radial-gradient(circle at 80% 10%, rgba(47, 58, 58, 0.04), transparent 30%),
+                var(--bg-dark);
 }
 
 .dark .main {
-    background-color: rgb(18, 18, 18)
+    background: radial-gradient(circle at 20% 20%, rgba(47, 93, 77, 0.12), transparent 35%),
+                radial-gradient(circle at 80% 10%, rgba(216, 201, 168, 0.08), transparent 30%),
+                var(--bg-dark);
 }
 
 .footer {
@@ -22,11 +32,11 @@
 }
 
 h2 {
-    color: rgb(226, 150, 35);
+    color: var(--accent-beige);
 }
 
 h3 {
-    color: rgb(111, 88, 185);
+    color: var(--accent-green);
 }
 
 button {

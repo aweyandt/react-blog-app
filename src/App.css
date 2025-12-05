@@ -2,9 +2,56 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+:root {
+    --bg-dark: #0c0f13;
+    --bg-surface: #12161c;
+    --bg-card: #1a2028;
+    --accent-beige: #d8c9a8;
+    --accent-green: #2f5d4d;
+    --accent-green-strong: #1f3f34;
+    --text-primary: #e8e1d2;
+    --text-muted: #a8b3ae;
+    --border-muted: #2b333c;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+:root[data-theme="light"] {
+    --bg-dark: #f4f1eb;
+    --bg-surface: #ffffff;
+    --bg-card: #f0ece1;
+    --accent-beige: #2f3a3a;
+    --accent-green: #3c7a63;
+    --accent-green-strong: #2c5a4b;
+    --text-primary: #1f2329;
+    --text-muted: #4d555b;
+    --border-muted: #d6d0c3;
+    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.12);
 }
 
 html, body, #root {
     height: 100%;
+    background-color: var(--bg-dark);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 16px;
+}
+
+body {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+a {
+    color: inherit;
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 2px solid var(--accent-beige);
+    outline-offset: 2px;
 }

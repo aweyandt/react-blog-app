@@ -9,6 +9,7 @@ import IndividualBlogPost from './components/blog/IndividualBlogPost';
 import './App.css';
 import Login from './components/login/Login';
 import { AuthProvider } from './components/authWrapper/AuthProvider';
+import Logout from './components/authWrapper/Logout';
 
 function App() {
   return ( 
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/contact" element={<ContactPage />} />
                 <Route path="/posts" element={<PostList />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/logout" element={<Logout />} />
                 <Route path="/posts/:post_id" element={<IndividualBlogPost />} />
               </Route>
             </Route>

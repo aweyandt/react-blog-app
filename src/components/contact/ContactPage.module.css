@@ -1,34 +1,46 @@
 
 .contact_page {
-    max-width: 50%;
-    margin: 4rem;
+    width: min(700px, 92%);
+    margin: 3rem auto;
 }
 
 .contact_page h2 {
     margin-bottom: 1rem;
-    color: rgb(226, 150, 35);
+    color: var(--accent-beige);
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.25rem;
 }
 
 .input, .textarea {
-    border: 1px solid gray;
+    border: 1px solid var(--border-muted);
     padding: 1rem;
+    background: var(--bg-surface);
+    color: var(--text-primary);
 }
 
 .btn {
-    background-color: rgb(226, 150, 35);
-    color: white;
+    background-color: var(--accent-green);
+    color: var(--text-primary);
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
     width: fit-content; 
     font-size: 20px;
+    border: 1px solid var(--border-muted);
+    transition: background-color 0.2s ease, transform 0.1s ease;
+    min-width: 140px;
 }
 
 .btn:hover {
-    background-color: rgb(206, 137, 33);
+    background-color: var(--accent-green-strong);
+    transform: translateY(-1px);
+}
+
+.error {
+    color: #ffb3b3;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }

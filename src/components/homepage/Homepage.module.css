@@ -1,45 +1,48 @@
 .content_block {
-    width: 80%;
-    max-width: 1200px;
+    width: min(1100px, 92%);
     min-height: 500px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 1rem 2rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.178);
-    background-color: rgb(243, 240, 240);
+    box-shadow: var(--shadow-soft);
+    background-color: var(--bg-card);
     display: flex;
     flex-direction: column;
     text-align: center;
     gap: 2rem;
+    border: 1px solid var(--border-muted);
 }
 
 .link {
     text-decoration: none;
-    color: rgb(120, 95, 204);
+    color: var(--accent-beige);
 }
 
 .link:hover {
-    color: rgb(76, 61, 128);
+    color: var(--text-primary);
 }
 
 .link_btn {
     text-decoration: none;
-    color: white;
+    color: var(--text-primary);
 }
 
 .btn {
-    background-color: rgb(226, 150, 35);
-    color: white;
+    background-color: var(--accent-green);
+    color: var(--text-primary);
     padding: 0.5rem 1.5rem;
     border-radius: 20px;
     width: fit-content; 
     font-size: 20px;
+    border: 1px solid var(--border-muted);
+    transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .btn:hover {
-    background-color: rgb(206, 137, 33);
+    background-color: var(--accent-green-strong);
+    transform: translateY(-1px);
 }
 
 /*Logged Out*/
@@ -79,4 +82,19 @@
     gap: 1rem;
 }
 
+@media (max-width: 900px) {
+    .content_block {
+        width: 94%;
+        padding: 1.5rem;
+    }
 
+    .logged_out {
+        grid-template-columns: 1fr;
+        padding: 0 1rem;
+    }
+
+    .log_in_btn,
+    .logged_out_explore_btn {
+        justify-self: center;
+    }
+}

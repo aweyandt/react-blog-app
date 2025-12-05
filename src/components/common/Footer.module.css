@@ -1,6 +1,8 @@
 .footer {
     text-align: center;
-    background-color: rgb(28, 43, 43);
-    color: white;
+    background-color: var(--bg-surface);
+    color: var(--text-muted);
     padding: 1rem 0;
+    border-top: 1px solid var(--border-muted);
+    font-size: 0.95rem;
 }

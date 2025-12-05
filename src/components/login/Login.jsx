@@ -10,16 +10,24 @@ function Login() {
         username: '',
         password: '',
     });
+    const [error, setError] = useState('');
     const navigate = useNavigate();
 
     const onSubmit = (e) => {
         e.preventDefault();
+        const passwordValid = /^(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':"\\|,.<>/?]).{8,}$/.test(userData.password);
+        if (!passwordValid) {
+            setError('Password must be at least 8 characters, include 1 uppercase letter and 1 symbol.');
+            return;
+        }
+        setError('');
         login(userData.username);
         navigate('/posts'); // Redirects the user to the psts page after form is submitted
     }
   return (
     <div className={styles.login_page}>
         <h2><strong>Log In</strong></h2>
+        {error && <p className={styles.error}>{error}</p>}
         <form className={styles.form} onSubmit={onSubmit}>
             <input 
                 placeholder='Username'

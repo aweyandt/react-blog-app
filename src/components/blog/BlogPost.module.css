@@ -1,16 +1,21 @@
 .content_block {
-    width: 80%;
-    max-width: 1200px;
+    width: min(1100px, 92%);
     margin-left: auto;
     margin-right: auto;
     margin-top: 2rem;
     margin-bottom: 2rem;
     padding: 1rem 2rem;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.178);
-    background-color: rgb(243, 240, 240);
+    box-shadow: var(--shadow-soft);
+    background-color: var(--bg-card);
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    border: 1px solid var(--border-muted);
 }
 
-
+@media (max-width: 900px) {
+    .content_block {
+        width: 94%;
+        padding: 1.5rem;
+    }
+}
